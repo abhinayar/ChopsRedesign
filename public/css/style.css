@@ -130,6 +130,9 @@ Alt-fonts: Nexa Light, Nexa Bold;
 }
 
 /* CHOPS STYLES */
+html {
+    overflow-x: hidden;
+}
 
 body {
 	padding: 0;
