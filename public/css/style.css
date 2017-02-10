@@ -799,6 +799,18 @@ body .page-content {
     }
 }
 
+@media (min-width: 600px) {
+    .imageRow .img-wrapper {
+        height: 320px;
+    }
+}
+
+@media (min-width: 600px) {
+    .imageRow .img-wrapper {
+        height: 350px;
+    }
+}
+
 @media (min-width: 768px) {
     .imageRow .image {
         padding: 6px;
@@ -836,13 +848,13 @@ body .page-content {
     }
     
     .imageRow .img-wrapper {
-        height: 28%;
+        height: 35%;
     }
 }
 
 @media (min-width: 1400px) {
     .imageRow .img-wrapper {
-        height: 32%;
+        height: 40%;
     }
 }
 
