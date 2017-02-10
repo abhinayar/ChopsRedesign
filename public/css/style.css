@@ -639,7 +639,7 @@ body .page-content {
     }
     
     .billboard-content {
-        padding: 100px 0;
+        padding: 110px 0;
     }
     
     .billboard .billboard-title h1 {
@@ -656,10 +656,6 @@ body .page-content {
 @media (min-width: 992px){
     .billboard .container {
         max-width: 960px;    
-    }
-    
-    .billboard-content {
-        padding: 120px 0;
     }
     
     .billboard .billboard-title h1 {
@@ -945,7 +941,7 @@ body .page-content {
         width: 22px;
         height: 22px;
     } .footer .social-icons a svg {
-        fill: #333;
+        fill: #000;
         height: 22px;
         width: 22px;
     }
