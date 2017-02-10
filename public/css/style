@@ -1,0 +1,17 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat';
+	font-size: 16px;
+	width: 100%;
+	min-height: 100%;
+}
+
+.header {
+	background: url(../images/bg.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 850px;
+	width: 100%;
+}
