@@ -580,7 +580,10 @@ body .page-content {
     .chopsDiff .column-desc, .chopsDiff .column.one .column-desc {
         max-width: 80%;
         margin: 0 auto;
-    }
+    } .chopsDiff .column.one .column-desc {
+        max-width: 85%;
+        margin: 0 auto;
+    } 
 }
 
 /* BILLBOARD SECTION */
@@ -636,7 +639,7 @@ body .page-content {
     }
     
     .billboard-content {
-        padding: 90px 0;
+        padding: 100px 0;
     }
     
     .billboard .billboard-title h1 {
@@ -653,6 +656,10 @@ body .page-content {
 @media (min-width: 992px){
     .billboard .container {
         max-width: 960px;    
+    }
+    
+    .billboard-content {
+        padding: 120px 0;
     }
     
     .billboard .billboard-title h1 {
