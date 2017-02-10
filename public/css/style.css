@@ -146,6 +146,42 @@ body .page-content {
     width: auto;
     max-width: auto;
     padding: 0 0.0001em;
+    transition: all 100ms ease;
+}
+
+body .page-alert {
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+} body .page-content {
+    margin-top: 39px;
+}
+
+.alert-content {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    min-height: 40px;
+    max-height: 40px;
+    min-width: 100%;
+    background: #333;
+    transition: all 100ms ease;
+    text-align: center;
+    padding-top: 11px;
+} .alert-content:hover {
+    background: #555;
+    transition: all 100ms ease;
+}
+
+.alert-content img {
+    max-width: 25px;
+    display: inline-block;
+} .alert-content a, .alert-content a:hover {
+    color: #fff;
+    text-decoration: none;
 }
 
 .no-pad {
@@ -193,7 +229,7 @@ body .page-content {
 		z-index: 998;
 		width: 100%;
 		height: 80px;
-		top: 0;
+		top: 40px;
 		left: 0;
 	}
 	
