@@ -280,7 +280,7 @@ body .page-content {
 		width: 100%;
 		margin: 0 auto;
 		text-align: center;
-		padding-top: 120px;
+		padding-top: 110px;
 		position: relative;
 	}
 
@@ -317,7 +317,7 @@ body .page-content {
 
 } @media (min-height: 481px) {
     .header {
-        min-height: auto;
+        min-height: 600px;
         max-height: 600px;
         padding-bottom: 0;
     }
@@ -326,7 +326,7 @@ body .page-content {
 		width: 100%;
 		margin: 0 auto;
 		text-align: center;
-		padding-top: 130px;
+		padding-top: 150px;
 		position: relative;
 	} .header .arrow-down {
 		display: block;
@@ -386,6 +386,7 @@ body .page-content {
 		//background-position: center -40px;
 		background-image: url(../images/index/header/bg.jpg);
 		max-height: 720px;
+        min-height: 720px;
 	}
 	
 	.header-container {
@@ -446,6 +447,7 @@ body .page-content {
 	
 	.header {
 		max-height: 750px;
+        min-height: 750px;
 	}
 	
 	.header-container {
