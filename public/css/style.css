@@ -156,7 +156,6 @@ body .page-alert {
     left: 0;
     width: 100%;
     z-index: 999;
-	transition: all 150ms ease;
 } body .page-content {
     margin-top: 39px;
 }
@@ -470,7 +469,7 @@ body .page-alert.hide {
 
 	.header-bg {
 		background-image: url(../images/index/header/bg_mob.jpg);
-		background-attachment: fixed;
+		background-attachment: auto;
 		width: 100%;
 		min-width: 100%;
 		min-height: 100%;
@@ -576,6 +575,11 @@ body .page-alert.hide {
 		min-height: 600px;
         max-height: 600px;
 	}
+	
+	.header-bg {
+		background-attachment: fixed;
+	}
+	
 	.header-content {
 		width: 100%;
 		padding-top: 100px;
