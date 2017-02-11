@@ -175,6 +175,7 @@ body .page-alert.hide {
     background: #333;
     transition: all 150ms ease;
     text-align: center;
+	background: red;
 } .alert-content:hover {
     background: #3f3f3f;
     transition: all 150ms ease;
