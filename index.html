@@ -30,11 +30,17 @@
 		<meta name="ms.locale" content="EN-US"> 
 		<meta name="category" content="homepage"> 
 		<meta name="url" content="http://www.chopssnacks.com">
+            
+        <!-- FAVICON -->
+        <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="./favicon/favicon.ico" type="image/x-icon">
        
-        <!-- Google Fonts -->
+        <!-- GOOGLE FONTS -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
         <!-- STYLING -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="http://cdn.rawgit.com/ShakrMedia/tuesday/master/build/tuesday.min.css"/>
+        <link rel="stylesheet" href="public/css/hover.min.css"/>        <link rel="stylesheet" href="public/css/animations.css"/>
         <link rel="stylesheet" href="./public/css/style.css"/>
         
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -83,34 +89,26 @@
 			<!-- Nav -->
 			<div class="navigation clearfix">
 				<div class="nav-content">
-					<div class="logo">
+					<div class="logo clearfix">
 						<div class="img-wrapper">
-							<img src="public/images/index/logo_white_mob.png" class="hidden-sm hidden-md hidden-lg" alt="Chops Snacks LLC" />
-							<img src="public/images/index/logo_white_full.png" class="hidden-xs" alt="Chops Snacks LLC"/>
+							<a href="">
+								<img src="public/images/index/logo_white_mob.png" class="hidden-sm hidden-md hidden-lg white" alt="Chops Snacks LLC" />
+								<img src="public/images/index/logo_white_full.png" class="hidden-xs white" alt="Chops Snacks LLC"/>
+								<img src="public/images/index/logo_black_mob.png" class="hidden-sm hidden-md hidden-lg black" alt="Chops Snacks LLC" />
+								<img src="public/images/index/logo_black_full.png" class="hidden-xs black" alt="Chops Snacks LLC"/>
+							</a>
 						</div>
 					</div>
 					<div class="mobile-nav">
 						<div class="hamburger">
-							<div class="svg-wrapper">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137 115">
-								  <path id="Selection"
-										d="M 136.00,3.00
-										   C 136.00,3.00 136.00,21.00 136.00,21.00
-											 136.00,21.00 0.00,21.00 0.00,21.00
-											 0.00,21.00 0.00,3.00 0.00,3.00
-											 0.00,3.00 136.00,3.00 136.00,3.00 Z
-										   M 136.00,48.00
-										   C 136.00,48.00 136.00,66.00 136.00,66.00
-											 136.00,66.00 0.00,66.00 0.00,66.00
-											 0.00,66.00 0.00,48.00 0.00,48.00
-											 0.00,48.00 136.00,48.00 136.00,48.00 Z
-										   M 136.00,94.00
-										   C 136.00,94.00 136.00,111.00 136.00,111.00
-											 136.00,111.00 0.00,111.00 0.00,111.00
-											 0.00,111.00 0.00,94.00 0.00,94.00
-											 0.00,94.00 136.00,94.00 136.00,94.00 Z" />
-								</svg>
-							</div>
+							<div class="spinner-master2 hamburger-icon">
+                                <input type="checkbox" id="spinner-form2" />
+                                <label for="spinner-form2" class="spinner-spin2">
+                                    <div class="spinner2 diagonal part-1"></div>
+                                    <div class="spinner2 horizontal"></div>
+                                    <div class="spinner2 diagonal part-2"></div>
+                                </label>
+                            </div>
 						</div>
 						<div class="cart">
 							<div class="svg-wrapper">
@@ -169,19 +167,19 @@
 							</div>
 						</div>
 					</div>
-					<div class="desktop-nav">
+					<div class="desktop-nav clearfix">
 						<ul class="nav-list">
-							<li class="nav-item" class="active">
-								<a href="index.html">Home</a>
+							<li class="nav-item">
+								<a href="index.html" class="active">Home</a>
 							</li>
 							<li class="nav-item">
-								<a href="TheStore.html">The Store</a>
+								<a href="TheStore.html" class="hvr-underline-from-left">The Store</a>
 							</li>
 							<li class="nav-item">
-								<a href="OurStory.html">Our Story</a>
+								<a href="OurStory.html" class="hvr-underline-from-left">Our Story</a>
 							</li>
 							<li class="nav-item">
-								<a href="ContactUs.html">Contact Us</a>
+								<a href="ContactUs.html" class="hvr-underline-from-left">Contact Us</a>
 							</li>
 							<li class="nav-item">
 								<a class="showCart">
@@ -247,10 +245,10 @@
 			</div>
 			<!-- ./Nav -->
 			<!-- Header -->
-			<div id="Top" class="header cover container-fluid clearfix">
-				<div class="header-bg">
+			<div id="Top" class="header container-fluid no-pad clearfix">
+				<div id="Top-bg" class="header-bg cover">
 					<div class="header-container">
-						<div class="header-content">
+						<div id="Header-copy" class="header-content header-parallax">
 							<div class="title clearfix">
 								<span class="small">
 									Life's Tough.
@@ -265,11 +263,11 @@
 								Premium beef brisket jerky that is hand-crafted &amp; slowly-marinated overnight to perfection.
 								<span class="bold">Discover how jerky should taste.</span>
 							</div>
-							<div class="button-wrapper shop-button">
+							<div class="button-wrapper shop-button hvr-bob">
 								<a href="TheChopsStore.html" class="button">Shop Now</a>
 							</div>
 							<div class="hidden-md hidden-lg arrow-down">
-								<div class="svg-wrapper">
+								<div class="svg-wrapper animated ">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133 77">
 									  <path id="arrowDown" stroke="black" stroke-width="0"
 											d="M 50.00,41.00
@@ -498,7 +496,7 @@
             <!-- Billboard -->
             <div id="ChopsInfo" class="billboard cover container-fluid clearfix no-pad">
                 <div class="container">
-                    <div class="billboard-content left">
+                    <div class="billboard-content left billboard-parallax">
                         <div class="billboard-title">
                             <h1>You wouldn't put <wbr><span class="alt">chili-lime</span> on a <span class="alt">steak</span>.</h1>
                         </div>
@@ -523,7 +521,7 @@
                         <div class="cta-title">
                             <h1>High in <span class="alt">protein</span>. <br class="hidden-lg">Low in <span class="alt">fat</span>.</h1>
                         </div>
-                        <div class="cta-button button-wrapper text-center">
+                        <div class="cta-button button-wrapper text-center hvr-bob">
                             <a href="TheStore.html">Shop Now</a>
                         </div>      
                     </div>
@@ -581,7 +579,7 @@
             </div>
             <!-- ./Image Row -->
             <!-- Footer -->
-            <div id="footer" class="footer container-fluid no-pad clearfix">
+            <div id="Footer" class="footer container-fluid no-pad clearfix">
                 <div class="container">
                     <div class="row">
                         <div class="hidden-xs hidden-sm col-md-3 social">
@@ -793,10 +791,16 @@
             </div>
             <!-- ./Footer -->
 		</div>
+		<!-- JQuery -->
 		<script
 		  src="https://code.jquery.com/jquery-2.2.4.min.js"
 		  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 		  crossorigin="anonymous"></script>
+		<!-- Bootstrap -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       	<!-- Parallax Library -->
+        <script src="public/js/scrollax.min.js"></script>
+        <!-- Custom Script -->
+        <script src="public/js/main.js"></script>
 	</body>
 </html>
