@@ -156,14 +156,14 @@ body .page-alert {
     left: 0;
     width: 100%;
     z-index: 999;
-	transition: all 100ms ease;
+	transition: all 150ms ease;
 } body .page-content {
     margin-top: 39px;
 }
 
 body .page-alert.hide {
 	height: 0px;
-	transition: all 100ms ease;
+	transition: all 150ms ease;
 }
 
 .alert-content {
@@ -409,7 +409,7 @@ body .page-alert.hide {
 	
 	.logo {
 		margin-top: 25px;	
-	}.logo .img-wrapper {
+	} .logo .img-wrapper {
 		width: 200px;
 	}
 	
