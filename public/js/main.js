@@ -20,10 +20,10 @@ $(document).ready(function(){
 		
 		/* Alert Hide */
 		if ($(document).scrollTop() > ($("#Top").height() + 40)) {
-			$(".page-alert").addClass("hide");
+			$(".page-alert").fadeOut(1500);
 			$(".navigation").addClass("shifted");
 		} else {
-			$(".page-alert").removeClass("hide");
+			$(".page-alert").fadeIn(1500);
 			$(".navigation").removeClass("shifted");
 		}
 		
