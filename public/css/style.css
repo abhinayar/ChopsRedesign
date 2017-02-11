@@ -570,7 +570,12 @@ body .page-alert.hide {
 }
 
 
-@media (min-width: 768px) {	
+@media (min-width: 768px) {
+	.header {
+		height: 600px;
+		min-height: 600px;
+        max-height: 600px;
+	}
 	.header-content {
 		width: 100%;
 		padding-top: 100px;
