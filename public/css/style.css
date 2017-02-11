@@ -464,7 +464,6 @@ body .page-alert.hide {
 	.header {
 		width: 100%;
 		min-height: 100%;
-		padding-bottom: 90px;
 		overflow: hidden;
 		position: relative;
 	}
@@ -487,6 +486,7 @@ body .page-alert.hide {
 		margin: 0 auto;
 		text-align: center;
 		padding-top: 110px;
+		padding-bottom: 90px;
 		position: relative;
 	}
 
@@ -528,13 +528,14 @@ body .page-alert.hide {
 
 } @media (min-height: 481px) {
     .header {
-        min-height: 600px;
-        max-height: 600px;
+        height: 720px;
+		min-height: 720px;
+        max-height: 720px;
         padding-bottom: 0;
     }
     
 	.header-content {
-		width: 100%;
+		width: 95%;
 		margin: 0 auto;
 		text-align: center;
 		padding-top: 150px;
@@ -571,7 +572,9 @@ body .page-alert.hide {
 
 @media (min-width: 768px) {	
 	.header-content {
+		width: 100%;
 		padding-top: 100px;
+		padding-bottom: 0;
 	}
 	
 	.header .title {
