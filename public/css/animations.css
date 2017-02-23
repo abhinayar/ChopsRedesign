@@ -25,4 +25,6 @@
 	height: 2px;
 	background: #fff;
 	bottom: -5px;
+    -webkit-transition-duration:.2s;
+    transition-duration:.2s
 }

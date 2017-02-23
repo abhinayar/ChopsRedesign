@@ -224,13 +224,53 @@ body .page-alert.hide {
 	max-width: 100%;
 }
 
+a[title='Sumo'] {
+    display: none !important;
+}
+
 /* NAVIGATION */
 
 @media (min-width: 0px) {	
 	/* Navigation */
-	.desktop-nav {
+    .desktop-nav {
+        display: none;
+    }
+    
+	.mobile-nav-list {
 		display: none;
-	}
+        z-index: -999;
+    } .mobile-nav-list.closed {
+        width: 0px;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: -1;
+        display: none;
+    } .mobile-nav-list.open {
+        display: block;
+        pointer-events: all;
+        width: 100%;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background: #333;
+        top: 0;
+        z-index: 9997;
+        padding-top: 120px;
+        font-size: 28px;
+        text-align: center;
+        transition: all 100ms ease;
+    } .mobile-nav-list li {
+        margin-bottom: 45px;
+    } .mobile-nav-list a {
+        color: #fff;
+        text-decoration: none;
+        padding-bottom: 3px;
+        border-bottom: 2px solid transparent;
+    } .mobile-nav-list a:hover {
+        border-bottom: 2px solid rgb(237,97,22);
+    } .mobile-nav-list a.active {
+        border-color: rgb(237,97,22);
+    }
 	
 	.navigation {
 		color: #fff;
@@ -253,6 +293,13 @@ body .page-alert.hide {
 		top: 0;
 		transition: all 150ms ease;
 	}
+    
+    .spinner-master2 {
+        position: absolute;
+        z-index: 9998;
+    } .spinner-master2 .spinner-spin2.open .spinner2 {
+        background: #fff;
+    }
 	
 	.nav-content {
 		padding-top: 15px;
@@ -285,6 +332,12 @@ body .page-alert.hide {
 	} .navigation svg {
 		fill: #fff;
 	}
+}
+
+@media (min-height: 600px) {
+    .mobile-nav-list.open {
+        padding-top: 210px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -322,7 +375,10 @@ body .page-alert.hide {
 		margin-left: 0;
 		transition: all 150ms ease;
 	}
-	
+    
+    .desktop-nav.closed {
+        width: 80%;    
+    }
 	.desktop-nav {
 		display: inline-block;
 		width: 80%;
@@ -1006,23 +1062,30 @@ body .page-alert.hide {
         background-size: cover;
         background-attachment: scroll;
         background-repeat: no-repeat;
+        cursor: pointer;
+        transition: all 75ms ease;
+    }
+    
+    .imageRow .img-wrapper:hover {
+        opacity: 0.8;
+        transition: all 150ms ease;
     }
 
-    .imageRow .row.one .img-wrapper.one {
+    .imageRow .row .img-wrapper.one {
         background-image: url(../images/index/imageRow/1.jpg);
-    } .imageRow .row.one .img-wrapper.two {
+    } .imageRow .row .img-wrapper.two {
         background-image: url(../images/index/imageRow/2.jpg);
-    } .imageRow .row.one .img-wrapper.three {
+    } .imageRow .row .img-wrapper.three {
         background-image: url(../images/index/imageRow/3.jpg);
-    } .imageRow .row.one .img-wrapper.four {
+    } .imageRow .row .img-wrapper.four {
         background-image: url(../images/index/imageRow/4.jpg);
-    } .imageRow .row.two .img-wrapper.one {
+    } .imageRow .row .img-wrapper.five {
         background-image: url(../images/index/imageRow/5.jpg);
-    } .imageRow .row.two .img-wrapper.two {
+    } .imageRow .row .img-wrapper.six {
         background-image: url(../images/index/imageRow/6.jpg);
-    } .imageRow .row.two .img-wrapper.three {
+    } .imageRow .row .img-wrapper.seven {
         background-image: url(../images/index/imageRow/7.jpg);
-    } .imageRow .row.two .img-wrapper.four {
+    } .imageRow .row .img-wrapper.eight {
         background-image: url(../images/index/imageRow/8.jpg);
     }
 }
@@ -1082,19 +1145,19 @@ body .page-alert.hide {
     }
     
     .imageRow .img-wrapper {
-        height: 35%;
+        height: 300px;
     }
 }
 
 @media (min-width: 1400px) {
     .imageRow .img-wrapper {
-        height: 40%;
+        height: 320px;
     }
 }
 
 @media (min-width: 1600px) {
     .imageRow .img-wrapper {
-        height: 40%;
+        height: 320px;
     }
 }
 
@@ -1254,6 +1317,896 @@ body .page-alert.hide {
         max-width: 1140px;
     }
 }
+
+/***************/
+/***************/
+/* About Us CSS */
+/***************/
+/***************/
+
+
+/* About Us Page */
+@media (min-width: 0px) {    
+    .subpage .page-content {
+		margin-top: 0;
+	}
+	
+	.subpage .subpage-header {
+		height: inherit;
+		width: 100%;
+		overflow: hidden;
+		color: #fff;
+	} .subpage .subpage-header-bg {
+        background-size: cover;
+		background-attachment: auto;
+		background-position: center center;
+        background-repeat: no-repeat;
+	} .subpage.about-us .subpage-header-bg {
+		background-image: url(../images/aboutUs/header.jpg);
+	} .subpage.contact-us .subpage-header-bg {
+		background-image: url(../images/contactUs/header.jpg);
+	} .subpage.the-store .subpage-header-bg {
+		background-image: url(../images/theStore/header.jpg);
+	} 
+	.subpage .subpage-header-content h1 {
+		font-size: 62px;
+		font-weight: 700;
+		padding-top: 160px;
+		padding-bottom: 45px;
+	}
+	
+	.subpage.about-us .button-section {
+		margin-top: 45px;
+		margin-bottom: 60px;
+	} .subpage .button-wrap {
+		width: 95%;
+		max-width: 280px;
+		height: 56px;
+		margin: 15px auto;
+		transition: all 150ms ease;
+        text-align: center;
+	} .subpage .button-wrap.solid {
+		background: rgb(237,97,22);
+	} .subpage .button-wrap.outline {
+		background: transparent;
+		border: 2px solid #333;
+	} .subpage .button-wrap.outline:hover {
+		background: #333;
+		transition: all 150ms ease;
+	}.subpage .button-wrap a {
+		display: inline-block;
+		width: 100%;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 700;
+		color: #fff;
+		padding-top: 19px;
+		text-decoration: none;
+		transition: all 150ms ease;
+	} .subpage .button-wrap.outline a {
+		color: #333;
+        padding-top: 17px;
+	} .subpage .button-wrap.outline:hover a {
+		color: #fff;
+		transition: all 150ms ease;
+	}
+	
+	.subpage .section-hr {
+		width: 100%;
+		height: 1px;
+		content: '';
+		margin: 0 auto;
+		background: rgba(0,0,0,0.1);
+	} .subpage .section-hr.short {
+		width: 90%;
+	} .subpage .section-hr.overlay {
+		background: rgba(0,0,0,1);
+	}
+	
+	.aboutUs-hr {
+		content: '';
+		width: 60px;
+		height: 8px;
+		background: rgb(237,97,22);
+		margin: 15px 0;
+		margin-bottom: 30px;
+	}
+	
+	.our-story {
+		padding-bottom: 45px;
+	}
+	.our-story .logo-icon {
+		width: 90%;
+		margin: 0 auto;
+		margin-top: -10px;
+		margin-bottom: 45px;
+		position: relative;
+		text-align: center;
+	} .our-story .logo-icon:before, .our-story .logo-icon:after {
+		content: '';
+		display: block;
+		width: 39%;
+		height: 1px;
+		background: rgba(0,0,0,0.2);
+		position: absolute;
+		top: 14px;
+		left: 0;
+	} .our-story .logo-icon:after {
+		left: auto;
+		right: 0;
+	} .our-story .logo-icon .img-wrapper {
+		width: 50px;
+		margin: 0 auto;
+		opacity: 1;
+	} 
+	
+	.our-story .heading h3 {
+		font-size: 21px;
+		font-weight: 700;
+		line-height: 1.6em;
+	}
+	
+	.our-story .story-section {
+		margin: 30px 0;
+		padding: 0;
+	} .our-story .story-section.one {
+		margin-top: 0;
+	} .our-story .story-section .story-image {
+		background-attachment: auto;
+		display: none;
+	} .our-story .story-section .story-image.one {
+		background-image: url(../images/aboutUs/ourStory/farm.jpg);
+	} .our-story .story-section .story-image.two {
+		background-image: url(../images/aboutUs/ourStory/meat.jpg);
+	} .our-story .story-section .col-xs-12 {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	} .our-story .story-section p {
+		line-height: 1.6em;
+		font-weight: 400;
+		color: #777;
+	}
+	
+	.our-difference {
+		color: #fff;
+		background-attachment: scroll;
+		background-image: url(../images/aboutUs/ourStory/diff_bg.jpg);
+		background-position: center center;
+		padding-top: 45px; 
+		padding-bottom: 45px;
+	} .our-difference .title-row h3 {
+		font-size: 32px;
+		font-weight: 700;
+		line-height: 1.6em;
+	} .our-difference p {
+		line-height: 1.6em;
+		margin: 30px 0;
+	} .our-difference p:first-of-type {
+		margin-top: 0;
+	}
+	
+	.the-team {
+		padding-top: 45px;
+	} .the-team .heading h3 {
+		font-size: 32px;
+		font-weight: 700;
+		line-height: 1.6em;
+	} 
+    
+    .the-team .team-item:first-of-type {
+        padding-top: 5px;
+    } .the-team .team-item {
+        padding-bottom: 60px;
+    } .the-team .img-wrapper {
+		max-width: 100%;
+        text-align: center;
+	} .the-team img {
+		max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+    } .the-team .team-name h3 {
+        font-size: 24px;
+        font-weight: 700;
+        padding-top: 15px;
+        padding-bottom: 10px;
+    } .the-team .section-hr {
+        width: 100%;
+        max-width: 320px;
+        margin: 15px 0;
+        margin-bottom: 12px;
+    } .the-team .team-desc p {
+        line-height: 1.6em;
+        color: #777;
+    }
+    
+    .text-button {
+        text-align: center;
+        background: #f0f0f0;
+        padding-top: 60px;
+        padding-bottom: 45px;
+    } .text-button h3 {
+        font-size: 24px;
+        font-weight: 700;
+        padding-bottom: 15px;
+        line-height: 1.6em;
+    }
+    
+    .subpage #Footer {
+        padding-top: 60px;
+    } .subpage #Footer .container {
+        max-width: none;
+    }
+}
+
+@media (min-width: 450px) {
+    .subpage .subpage-header-content h1 {
+		font-size: 72px;
+    }
+    
+    .our-difference, .the-team {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+@media (min-width: 520px) {
+    .our-story .logo-icon:before, .our-story .logo-icon:after {
+		width: 44%;
+    }
+    
+    .our-story .heading h3, .our-difference .heading h3, .the-team .heading h3, .the-team .team-name h3, .text-button h3 {
+        font-size: 32px;
+    } 
+}
+
+@media (min-width: 768px) {
+    .subpage .subpage-header-bg {
+		background-attachment: fixed;
+        background-position: center -560px;
+    }
+    
+    .subpage .subpage-header-content h1 {
+		font-size: 72px;
+    }
+    
+    .our-story {
+        padding-bottom: 60px;
+    }
+    
+    .our-difference, .the-team {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+    
+    .our-story .logo-icon {
+		width: 100%;
+    }
+    
+    .our-story .heading h3, .our-difference .heading h3, .the-team .heading h3 {
+        font-size: 42px;
+    } 
+    
+    .the-team .team-name h3 {
+        font-size: 24px;
+    } 
+    
+    .text-button h3 {
+        font-size: 32px;
+    } .text-button .button-wrap {
+        display: inline-block;
+        margin-top: 25px !important;
+    }
+    
+    .the-team .team-item:first-of-type {
+        padding-top: 0;
+    }
+    
+    .subpage #Footer {
+        padding-top: 120px;
+    } 
+}
+
+@media (min-width: 992px) {
+    .subpage .container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    
+    .subpage .subpage-header-content h1 {
+		font-size: 80px;
+		font-weight: 700;
+		padding-top: 200px;
+		padding-bottom: 60px;
+	}
+    
+    .our-story {
+        padding-bottom: 75px;
+    }
+    
+    .our-difference, .the-team {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+    
+    .text-button h3 {
+        font-size: 42px;
+    } .text-button .button-wrap {
+        display: inline-block;
+        margin-top: 40px !important;
+    }
+    
+    .subpage.about-us .button-section {
+		margin-top: 60px;
+		margin-bottom: 60px;
+    }
+    
+    .our-story .logo-icon {
+		width: 100%;
+		margin: 0 auto;
+		margin-top: 0;
+		margin-bottom: 45px;
+	} .our-story .logo-icon:before, .our-story .logo-icon:after {
+		content: '';
+		display: block;
+		width: 44%;
+		height: 1px;
+		background: rgba(0,0,0,0.2);
+		position: absolute;
+		top: 25px;
+		left: 0;
+	} .our-story .logo-icon:after {
+		left: auto;
+		right: 0;
+	} .our-story .logo-icon .img-wrapper {
+		width: 75px;
+		margin: 0 auto;
+		opacity: 1;
+	} 
+}
+
+
+/***************/
+/***************/
+/* Contact Us CSS */
+/***************/
+/***************/
+
+@media (min-width: 0px) {
+    .contact-us .map-section {
+        padding: 30px 0;   
+        padding-bottom: 30px;
+    }
+    
+    .contact-us #map {
+        width: 100%;
+        height: 180px;
+    }
+    
+    .contact-us .contact-intro .heading h3 {
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 1.6em;
+    }
+    
+    .contact-us .section-hr {
+        content: '';
+        width: 40px;
+        height: 8px;
+        background: rgb(237,97,22);
+        margin-left: 0;
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+    
+    .contact-us .contact-section {
+      padding-top: 30px;  
+    } .contact-us .column-heading h3 {
+        font-size: 21px;
+        font-weight: 700;
+    } .contact-us .contact-item {
+        margin: 15px 0;
+    } .contact-us .sub-heading h5 {
+        font-size: 16px;
+        padding-bottom: 5px;
+        color: #777;
+    } .contact-us .contact-info a {
+        color: #337ab7;
+    } .contact-us .contact-address p {
+        color: #777;
+        line-height: 1.2em;
+    }
+    
+    .contact-us .company {
+        margin-top: 60px;
+        padding-bottom: 45px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    } .contact-us .company .contact-item {
+        margin-top: 5px;
+    }
+}
+
+@media (min-width: 650px) {
+    .contact-us .contact-row .col-xs-12 {
+        width: 50%;
+    }
+    
+    .contact-us .contact-intro .heading h3 {
+        margin-top: 5px;   
+        font-size: 24px;
+    }
+    .contact-us .company {
+        border: none;
+        margin-top: 5px;;
+    } .contact-us .info {
+        margin-top: 5px;
+    } .contact-us .company .contact-item {
+        margin-top: 0;
+    } .contact-us .contact-address p {
+        color: #777;
+        line-height: 1.4em;
+    }
+    
+    .contact-us .column-heading h3 {
+        font-size: 24px;
+    }
+    
+    .contact-us .contact-row {
+        padding-bottom: 45px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-us #map {
+        width: 105%;
+        margin-left: -2.5%;
+    }
+    
+    .subpage #Footer {
+        padding-top: 75px;
+    } 
+}
+
+@media (min-width: 992px) {
+    .contact-us .map-section {
+        padding-top: 45px;
+        padding-bottom: 35px;
+    }
+    
+    .contact-us #map {
+        height: 250px;
+        width: 105%;
+        margin-left: -2.5%;
+    }
+    
+    .contact-us .contact-intro .heading h3, .contact-us .column-heading h3 {
+        font-size: 32px;
+    }
+    
+    .contact-us .contact-row {
+        padding-bottom: 60px;
+    }
+}
+
+@media (min-width: 0px) {
+    .the-store .container {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    
+    .store-banner {
+        padding-top: 30px;
+    }
+    
+    .store-intro {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    } .store-intro .intro-row h3 {
+        width: 90%;
+        margin: 0 auto;
+        line-height: 1.6em;
+        font-size: 18px;
+        font-weight: 400;
+        color: #777;
+        padding-bottom: 45px;
+    } .store-intro .underline {
+        display: block;
+        margin-bottom: 10px;
+        padding-bottom: 1px;
+        font-weight: 700;
+        color: #333;
+        font-size: 20px;
+    }
+    
+    .store-items {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        //border-bottom: 1px solid rgba(0,0,0,0.1);
+    } .store-hr {
+        opacity: 0.4;
+    }
+    
+    .store-item .item-image {
+        background: #f0f0f0;
+        //background: rgba(237,97,22, 0.4);
+        position: relative;
+    } .store-item .item-image a .front {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        transition: all 150ms ease;
+    } .store-item .item-image a:hover .front {
+        opacity: 0;
+        transition: all 150ms ease;
+    }
+    
+    .store-item .item-image a .quick-view {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 55px;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        background: rgba(0,0,0,0.05);
+        padding-top: 17px;
+        font-size: 18px;
+        color: rgb(237,97,22);
+        font-weight: 400;
+        transition: all 150ms ease;
+    } .store-item .item-image a:hover .quick-view {
+        opacity: 1;
+        transition: all 150ms ease;
+    }
+    
+    .store-item {
+        text-align: center;
+        padding-bottom: 45px;
+    } .store-item .item-title h3 {
+        font-weight: 700;
+        color: #333;
+        font-size: 24px;
+        padding: 21px 0;
+        padding-bottom: 10px;
+        max-width: 80%;
+        margin: 0 auto;
+        line-height: 1.2em;
+    } .store-item .item-price p {
+        line-height: 1.6em;
+        font-weight: 400;
+        padding-bottom: 10px;
+        font-size: 21px;
+    } .store-item .item-desc p {
+        font-weight: 500;
+        color: #777;
+        line-height: 1.6em;
+        padding-bottom: 20px;
+        max-width: 85%;
+        margin: 0 auto;
+        font-size: 18px;
+    } .store-item .item-button {
+        width: 180px;
+        height: 48px;
+        margin-top: 0;
+    } .store-item .item-button a {
+        font-size: 18px;
+        padding-top: 15px;
+    }
+}
+
+@media(min-width: 520px) {
+    .store-item {
+        padding-bottom: 60px;
+    }
+    
+    .store-intro .underline {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 768px) {    
+    .the-store .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .subpage.the-store .subpage-header-bg {
+        background-position: right -620px;
+    }
+    
+    .store-intro .intro-row h3 {
+        width: 95%;
+        line-height: 1.6em;
+        font-size: 18px;
+    } .store-intro .underline {
+        font-size: 28px;
+    }
+    
+    .store-item .item-desc p {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 992px) {
+    .the-store .container, .the-store #Footer .container, .store-hr {
+        max-width: 960px;
+        margin: 0 auto;
+    } .store-hr {
+        margin-top: 30px;
+    }
+    
+    .store-intro .intro-row h3 {
+        width: 90%;
+        line-height: 1.8em;
+        font-size: 18px;
+    } .store-intro .underline {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+    
+    .store-item .item-title h3 {
+        max-width: 100%;
+    }
+    .store-item .item-desc p {
+        max-width: 100%;
+    }
+    
+    .store-item .item-image a .quick-view {
+        height: 65px;
+        padding-top: 21px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .the-store #Footer .container {
+        max-width: 1140px;
+    }
+}
+
+/* PRODUCT SUBPAGE */
+@media (min-width: 0px) {
+    .product-subpage {
+    
+    }
+
+    .product-header {
+        height: 130px;
+        background-image: url(../images/theStore/product-headerBG.jpg);
+    }
+    
+    .product-subpage .product-section {
+        padding: 35px 0;
+    }
+    
+    .product-subpage .item-image {
+        background: #f0f0f0;
+        width: 100%;
+        height: auto;
+        height: auto;
+        position: relative;
+        text-align: center;
+    } .product-subpage .main-image {
+        padding-bottom: 10px;
+    }
+    
+    .product-subpage .item-image img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        top: 0;
+        left: 0;
+    } .product-subpage .item-image img.active {
+        position: relative;
+        z-index: 4 !important;
+        //border: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .product-subpage .sub-images .sub-image {
+        background: #f0f0f0;
+        width: 100%;
+        height: auto;
+        position: relative;
+        text-align: center;
+    }
+    
+    .product-subpage .sub-images .sub-image:hover {
+        background: #ddd;
+        cursor: pointer;
+    } .product-subpage .sub-images .sub-image.active {
+        background: #aaa;
+    }
+    
+    .product-subpage .image-half {
+        margin-bottom: 30px;
+    }
+    
+    .product-subpage .product-info .section-hr {
+        margin-bottom: 10px;
+    }
+    
+    .product-subpage .title h2 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        padding-bottom: 15px;
+    } .product-subpage .desc {
+        text-align:  center;
+        font-size: 16px;
+        color: #777;
+        line-height: 1.6em;
+        margin-bottom: 30px;
+    }
+    
+    .product-subpage .product-button-wrapper {
+        line-height: 1.6em;
+        border: 2px solid #333;
+        margin-bottom: 10px;
+        transition: all 120ms ease;
+        cursor: pointer;
+    } .product-subpage .product-button-wrapper.active {
+        background: rgb(237,97,22);
+        border-color: rgb(237,97,22);
+    } 
+    
+    .product-subpage .product-button-wrapper:not(.active):hover {
+        background: #333;
+        border-color: #333;
+        transition: all 120ms ease;
+    } .product-subpage .product-button-wrapper:not(.active):hover a {
+        color: #fff;
+    }
+    
+    .product-subpage .product-button-wrapper a {
+        color: #333;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding: 16px 0;
+        font-size: 18px;
+        text-decoration: none;
+    } .product-subpage .product-button-wrapper.active a {
+        color: #fff;
+        font-weight: 700;
+    }
+    
+    .product-subpage .order-quant {
+        margin-bottom: 15px;
+    }
+    
+    .product-subpage .order-quant-wrapper {
+        margin-top: 20px;
+        border: 1px solid rgba(0,0,0,0.15);
+        background: #f0f0f0;
+    } .product-subpage .order-quant .minus {
+        border-right: 1px solid rgba(0,0,0,0.1);
+        cursor: pointer;
+        margin-left: 15px;
+    } .product-subpage .order-quant .plus {
+        border-left: 1px solid rgba(0,0,0,0.1);
+        cursor: pointer;
+        margin-right: 15px;
+    }
+    
+    .product-subpage .order-quant .quant {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    
+    .product-subpage .order-quant .minus:hover,
+    .product-subpage .order-quant .plus:hover {
+        background: #ddd;
+    }
+    
+    .product-subpage .order-quant-item {
+        height: 100%;
+        display: inline-block;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        font-size: 18px;
+    }
+    
+    .product-subpage .buy-button-wrapper {
+        background: rgb(237,97,22);
+    } .product-subpage .buy-button-wrapper:hover {
+        background: #d84b00;
+        transition: all 120ms ease;
+    }
+    
+    .product-subpage .buy-button-wrapper a {
+        display: inline-block;
+        color: #fff;
+        font-size: 18px;
+        height: 100%;
+        width: 100%;
+        padding: 25px 0;
+        font-weight: 700;
+        text-decoration: none;
+    }
+    
+    .product-subpage .product-section .container {
+        padding-bottom: 120px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+}
+
+@media (min-width: 520px) {
+    .product-subpage .title h2 {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 600px) {
+    .product-subpage .image-half {
+        margin-bottom: 50px;
+    }
+    
+    .product-subpage .title h2 {
+        font-size: 36px;
+    }
+    
+    .product-subpage .desc {
+        margin-bottom: 45px;
+    }
+    
+    .product-subpage .product-button-wrapper a {
+        padding: 20px 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .product-subpage .item-image:hover {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .product-subpage .item-image img:hover {
+        transform: scale(2);
+        transition: transform 150ms ease;
+        cursor: pointer;
+    } .product-subpage .item-image.nutrition img:hover {
+        transform: scale(2) translateY(100px);
+    }
+    
+    .product-subpage .product-section {
+        padding: 60px 0;
+    }
+    
+    .product-subpage .image-half {
+        margin-bottom: 0;
+    }
+    
+    .product-subpage .title h2 {
+        font-size: 36px;
+        line-height: 1.2em;
+    }
+    
+    .product-subpage .desc {
+        margin-bottom: 30px;
+    }
+    
+    .product-subpage .product-button-wrapper a {
+        padding: 18px 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .product-header {
+        height: 140px;
+    }
+    
+    .product-subpage .title h2 {
+        font-size: 46px;
+        line-height: 1.2em;
+    }
+}
+
+
 
 
 
