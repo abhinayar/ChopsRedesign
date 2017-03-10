@@ -7,7 +7,7 @@
         
         <!-- META CONTENT -->
         <meta charset="utf-8">
-        <title>Chops Snacks | Store</title>
+        <title>Chops Snacks | Chili Pepper Jerky</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 		<meta name="description" content="Chops is jerky made with premium tender and moist beef brisket, crafted with all natural ingredients using a special recipe and technique. Hailing from Georgia, we combine generations of tradition and skill when crafting our products. Come check us out and join the Chops Revolution!"/>
 		<meta name="author" content="Abhi Nayar"/>
@@ -40,8 +40,8 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
         <!-- STYLING -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="http://cdn.rawgit.com/ShakrMedia/tuesday/master/build/tuesday.min.css"/>
-        <link rel="stylesheet" href="public/css/hover.min.css"/>        <link rel="stylesheet" href="public/css/animations.css"/>
+        <link rel="stylesheet" href="public/css/hover.min.css"/>
+        <link rel="stylesheet" href="public/css/animations.css"/>
         <link rel="stylesheet" href="./public/css/style.css"/>
         
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -76,6 +76,10 @@
           ga('send', 'pageview');
 
         </script>
+        
+        <!-- Sumome -->
+        <script src="//load.sumome.com/" data-sumo-site-id="654a25adb8d72c60dba510d58814b47f5be96de4c979f855d46af10f725e2eee" async="async"></script>
+        
         <!-- Sumome -->
         <script src="//load.sumome.com/" data-sumo-site-id="654a25adb8d72c60dba510d58814b47f5be96de4c979f855d46af10f725e2eee" async="async"></script>
 	</head>
@@ -132,7 +136,8 @@
 						</ul>
 						<div class="cart">
 							<div class="svg-wrapper">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155 147">
+								<a href="#" class="snipcart-checkout">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155 147">
 									  <path id="Selection" stroke="black" stroke-width="0"
 											d="M 27.00,1.00
 											   C 29.57,1.01 33.31,0.78 35.26,2.74
@@ -184,6 +189,8 @@
 											   C 149.13,132.98 147.61,117.42 134.02,119.51
 												 122.32,124.71 129.18,140.45 139.98,136.40 Z" />
 									</svg>
+									<div class="snipcart-summary item-count">(<span class="snipcart-total-items"></span>)</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -193,7 +200,7 @@
 								<a href="index.html" class="hvr-underline-from-left">Home</a>
 							</li>
 							<li class="nav-item">
-								<a href="store.html" class="">The Store</a>
+								<a href="store.html" class="hvr-underline-from-left">The Store</a>
 							</li>
 							<li class="nav-item">
 								<a href="about.html" class="hvr-underline-from-left">About Us</a>
@@ -201,8 +208,8 @@
 							<li class="nav-item">
 								<a href="contact.html" class="hvr-underline-from-left">Contact Us</a>
 							</li>
-							<li class="nav-item">
-								<a class="showCart">
+							<li class="nav-item cart-item">
+								<a href="#" class="showCart snipcart-checkout">
 									<div class="svg-wrapper">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155 147">
 										  <path id="Selection" stroke="black" stroke-width="0"
@@ -257,7 +264,16 @@
 													 122.32,124.71 129.18,140.45 139.98,136.40 Z" />
 										</svg>
 									</div>
+									<div class="snipcart-summary item-count">(<span class="snipcart-total-items"></span>)</div>
 								</a>
+								<div class="snipcart-summary summary-wrapper">
+									Items in cart:&nbsp;&nbsp;<span class="snipcart-total-items"></span>
+									<br/>
+									Cart Total:&nbsp;&nbsp;<span class="snipcart-total-price"></span>
+									<div class="summary-checkout-button snipcart-checkout">
+										View Cart
+									</div>
+								</div>
 							</li>
 						</ul>
 					</div>
@@ -321,7 +337,7 @@
                                 <div class="buy-options">
                                     <div class="row buy-row">
                                         <div class="col-xs-12 col-sm-12 buy-option single">
-                                            <div class="product-button-wrapper active single text-center">
+                                            <div class="product-button-wrapper active single text-center" data-target="single">
                                                 <a class="single-order buy-button">
                                                     Single Order
                                                     <span class="">&nbsp;|&nbsp;</span>
@@ -332,23 +348,23 @@
                                             </div>
                                         </div>
                                         <div class="col-xs-12 col-sm-12 buy-option single">
-                                            <div class="product-button-wrapper single text-center">
+                                            <div class="product-button-wrapper pack text-center" data-target="pack">
                                                 <a class="single-order buy-button">
                                                     Pack of 8
                                                     <span class="">&nbsp;|&nbsp;</span>
                                                     <span class="order-price">
-                                                        $59.99
+                                                        $47.99
                                                     </span>
                                                 </a>
                                             </div>
                                         </div>
                                         <div class="col-xs-12 col-sm-12 buy-option single">
-                                            <div class="product-button-wrapper single text-center">
+                                            <div class="product-button-wrapper sub text-center" data-target="sub">
                                                 <a class="single-order buy-button">
                                                     Monthly Subscription
                                                     <span class="">&nbsp;|&nbsp;</span>
                                                     <span class="order-price">
-                                                        $49.99
+                                                        $42.99
                                                     </span>
                                                 </a>
                                             </div>
@@ -372,7 +388,43 @@
                                 </div>
                                 <div class="add-to-cart-section">
                                     <div class="buy-button-wrapper text-center">
-                                        <a href="#" class="buy-button">Add To Cart</a>
+                                        <a href="#"
+										  class="buy-button snipcart-add-item single" 
+										  data-item-id="chili-pepper-jerky-single" 
+										  data-item-name="Chili Pepper Jerky (Single Bag)" 
+										  data-item-price="6.99" 
+										  data-item-weight="78" 
+										  data-item-url="/"
+										  data-item-description="Not for the faint of heart. Real chili peppers make this the spiciest stuff on the market. Net wt. per bag: 2.75oz. Single bag order."
+										  data-item-image="public/images/theStore/bags/chili_pepper_front.png"
+										  data-item-quantity="1">
+											Add To Cart
+										</a>
+                                   		<a href="#"
+										  class="buy-button hidden snipcart-add-item pack" 
+										  data-item-id="chili-pepper-jerky-8pack" 
+										  data-item-name="Chili Pepper Jerky (8 Pack)" 
+										  data-item-price="47.99" 
+										  data-item-weight="624" 
+										  data-item-url="/"
+										  data-item-description="Not for the faint of heart. Real chili peppers make this the spiciest stuff on the market. Net wt. per bag: 2.75oz. 8 bags per month one time order."
+										  data-item-image="public/images/theStore/bags/chili_pepper_front.png"
+										  data-item-quantity="1">
+											Add To Cart
+										</a>
+                                   		<a href="#"
+										  class="buy-button hidden snipcart-add-plan sub" 
+										  data-plan-id="chili-pepper-jerky-8pack-subscription" 
+										  data-plan-name="Chili Pepper Jerky (8 Pack Subscription, 2.75oz Bags)" 
+										  data-plan-interval="Month"
+										  data-plan-amount="47.99" 
+										  data-plan-weight="624" 
+										  data-plan-url="/"
+										  data-plan-description="Not for the faint of heart. Real chili peppers make this the spiciest stuff on the market. Net wt. per bag: 2.75oz. 8 bags per month subscription. Card will be charged monthly."
+										  data-plan-image="public/images/theStore/bags/chili_pepper_front.png"
+										  data-plan-quantity="1">
+											Add To Cart
+										</a>
                                     </div>
                                 </div>
                             </div>
@@ -553,12 +605,14 @@
                             </div>
                             <div class="footer-content">
                                 <!-- Form goes here. Sumome? -->
-                                <form role="form" id="newsletter-form">
+                                <!--<form role="form" id="newsletter-form">
                                     <div class="form-group">
                                         <input type="text" id="email" name="email" class="newsletter email" placeholder="Email Address"/>
                                         <button type="submit" class="newsletter submit">Subscribe</button>
                                     </div>
-                                </form>
+                                </form>-->
+                                <!-- Sumome Form -->
+                                <span data-sumome-listbuilder-embed-id="716091b0b901fb38f14c4947a2a9d8af3e702ee5616d956f1ef473f17938448b"></span>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-3 footer-contact">
@@ -594,6 +648,8 @@
             </div>
             <!-- ./Footer -->
         </div>
+        <!-- Newsletter Subscribed Modal -->
+        
         <!-- ./Page Content -->
         <!-- JQuery -->
 		<script
@@ -602,7 +658,11 @@
 		  crossorigin="anonymous"></script>
 		<!-- Bootstrap -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       	<!-- SnipCart -->
+        <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="ZTE2MDExNmMtZDEwNC00MzkxLTgxOWQtZDU4M2M4MDZjZDg3NjM2MjQyNTIyOTc2NjQ0MDU0"></script>
+		<link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
         <!-- Custom Script -->
         <script src="public/js/main.js"></script>
+        <script src="public/js/orderSnipcart.js"></script>
 	</body>
 </html>
