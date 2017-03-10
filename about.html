@@ -133,7 +133,8 @@
 						</ul>
 						<div class="cart">
 							<div class="svg-wrapper">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155 147">
+								<a href="#" class="snipcart-checkout">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155 147">
 									  <path id="Selection" stroke="black" stroke-width="0"
 											d="M 27.00,1.00
 											   C 29.57,1.01 33.31,0.78 35.26,2.74
@@ -185,6 +186,8 @@
 											   C 149.13,132.98 147.61,117.42 134.02,119.51
 												 122.32,124.71 129.18,140.45 139.98,136.40 Z" />
 									</svg>
+									<div class="snipcart-summary item-count">(<span class="snipcart-total-items"></span>)</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -202,8 +205,8 @@
 							<li class="nav-item">
 								<a href="contact.html" class="hvr-underline-from-left">Contact Us</a>
 							</li>
-							<li class="nav-item">
-								<a class="showCart">
+							<li class="nav-item cart-item">
+								<a href="#" class="showCart snipcart-checkout">
 									<div class="svg-wrapper">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155 147">
 										  <path id="Selection" stroke="black" stroke-width="0"
@@ -258,7 +261,16 @@
 													 122.32,124.71 129.18,140.45 139.98,136.40 Z" />
 										</svg>
 									</div>
+									<div class="snipcart-summary item-count">(<span class="snipcart-total-items"></span>)</div>
 								</a>
+								<div class="snipcart-summary summary-wrapper">
+									Items in cart:&nbsp;&nbsp;<span class="snipcart-total-items"></span>
+									<br/>
+									Cart Total:&nbsp;&nbsp;<span class="snipcart-total-price"></span>
+									<div class="summary-checkout-button snipcart-checkout">
+										View Cart
+									</div>
+								</div>
 							</li>
 						</ul>
 					</div>
